@@ -1,0 +1,47 @@
+# 依赖
+node_modules/
+
+# 构建产物
+dist/
+out/
+*.local
+
+# 环境变量 & 密钥
+.env
+.env.*
+!.env.example
+
+# 隐私与安全
+Config_ModAPI.md
+
+# 内部文档（含"协助我开发"口吻与比赛策略，不公开）
+任务书.md
+关键信息.md
+记忆炼金_项目全景文档.md
+
+# 用户数据（本地生成内容）
+generated-images/
+provenance/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 日志
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 测试覆盖率
+coverage/
+
+# TypeScript 增量编译
+*.tsbuildinfo

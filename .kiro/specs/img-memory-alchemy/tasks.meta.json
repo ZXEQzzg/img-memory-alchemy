@@ -1,0 +1,1003 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1. 初始化项目结构与工程配置": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749245638
+      },
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749257126
+      },
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749876179
+      }
+    ],
+    "2.1 创建主进程入口，管理 ControlPage 窗口和 Widget 窗口的生命周期": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749245774
+      },
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749882431
+      },
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791750035346
+      }
+    ],
+    "2.2 实现 Widget 窗口位置与尺寸的持久化读写（写入 `AppConfig`）": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749245914
+      },
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791750041965
+      },
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791750105832
+      }
+    ],
+    "3.1 创建 `preload.ts`，通过 `contextBridge` 暴露 `electronAPI` 类型化接口": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749246037
+      },
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791750129042
+      },
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791787894601
+      },
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791788037437
+      }
+    ],
+    "3.2 实现主进程 IPC Handler 注册层，所有 handler 统一在 `registerIpcHandlers()` 中注册": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749246117
+      },
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791788042011
+      },
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791788161117
+      }
+    ],
+    "4.1 实现 `ConfigStore`，基于 `electron-store` 或 JSON 文件持久化 `AppConfig`": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749246190
+      },
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791750132873
+      },
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791788166506
+      },
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791788239400
+      }
+    ],
+    "5.1 创建 ControlPage React 应用，展示占位各功能区（目录管理、排除管理、皮肤选择、模式切换、隐私声明）": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749246271
+      },
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791750136826
+      },
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791788244531
+      },
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791788393744
+      }
+    ],
+    "5.2 创建 Widget React 应用，展示占位皮肤区域和状态面板": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749246343
+      },
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791750140331
+      },
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791788399079
+      },
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791788498109
+      }
+    ],
+    "6. 阶段一检查点": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749246447
+      },
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791788508892
+      },
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791790125288
+      }
+    ],
+    "7.1 实现目录扫描：递归读取授权目录，过滤有效格式，标记损坏/不可访问文件": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749246531
+      },
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791790177720
+      },
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791790341937
+      },
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791790349883
+      },
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791790421040
+      }
+    ],
+    "7.3 实现排除列表过滤逻辑（文件夹前缀匹配 + 文件精确匹配）": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749246613
+      },
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791790426260
+      },
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791790845619
+      }
+    ],
+    "7.5 实现随机抽样逻辑（`sample()`），保证批次内不重复，优先历史去重": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749246730
+      },
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791790853170
+      },
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791790917492
+      }
+    ],
+    "8.1 实现 `GenerationJob` 类：状态机转换、AbortController、jobId（UUID v4）": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749246837
+      },
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791790934147
+      },
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791790993987
+      }
+    ],
+    "8.3 实现 `GenerationJobService`（主进程），管理当前活动 Job，处理旧 Job 结果丢弃逻辑": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749246924
+      },
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791791009165
+      },
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791791431816
+      }
+    ],
+    "8.4 实现超时策略：每个网络请求附加 60s `AbortSignal.timeout`": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749247006
+      },
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791791438829
+      }
+    ],
+    "9.1 创建 `MockModelGateway`，实现四个接口，返回确定性本地预置数据": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749247096
+      },
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791791446352
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819801627
+      },
+      {
+        "executionId": "6b5ec0d6-ea72-4e9e-9ea2-3ae1067b5017",
+        "chatSessionId": "sess_cfc4a53e-4d59-4cca-a744-11eff5707171",
+        "timestamp": 1791819904925
+      },
+      {
+        "executionId": "6b5ec0d6-ea72-4e9e-9ea2-3ae1067b5017",
+        "chatSessionId": "sess_cfc4a53e-4d59-4cca-a744-11eff5707171",
+        "timestamp": 1791820074790
+      },
+      {
+        "executionId": "6b5ec0d6-ea72-4e9e-9ea2-3ae1067b5017",
+        "chatSessionId": "sess_cfc4a53e-4d59-4cca-a744-11eff5707171",
+        "timestamp": 1791820078322
+      },
+      {
+        "executionId": "6b5ec0d6-ea72-4e9e-9ea2-3ae1067b5017",
+        "chatSessionId": "sess_cfc4a53e-4d59-4cca-a744-11eff5707171",
+        "timestamp": 1791820500589
+      },
+      {
+        "executionId": "6b5ec0d6-ea72-4e9e-9ea2-3ae1067b5017",
+        "chatSessionId": "sess_cfc4a53e-4d59-4cca-a744-11eff5707171",
+        "timestamp": 1791820503643
+      },
+      {
+        "executionId": "6b5ec0d6-ea72-4e9e-9ea2-3ae1067b5017",
+        "chatSessionId": "sess_cfc4a53e-4d59-4cca-a744-11eff5707171",
+        "timestamp": 1791820567578
+      }
+    ],
+    "9.3 准备 Demo 模式预置资源：3 张示例原图 + 1 张预置生成图，放入 `src/assets/demo/`": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749247192
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819801728
+      },
+      {
+        "executionId": "6b5ec0d6-ea72-4e9e-9ea2-3ae1067b5017",
+        "chatSessionId": "sess_cfc4a53e-4d59-4cca-a744-11eff5707171",
+        "timestamp": 1791819908407
+      },
+      {
+        "executionId": "cb9e0c6e-ca50-473c-8edd-5c94e6602933",
+        "chatSessionId": "sess_86b358a8-f471-423d-b803-477bb282f143",
+        "timestamp": 1791820937490
+      },
+      {
+        "executionId": "cb9e0c6e-ca50-473c-8edd-5c94e6602933",
+        "chatSessionId": "sess_86b358a8-f471-423d-b803-477bb282f143",
+        "timestamp": 1791820940772
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821438930
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821538115
+      }
+    ],
+    "10.1 实现目录管理：添加目录（IPC 调用）、移除目录、展示有效图片数量和错误说明": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749247275
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819801846
+      },
+      {
+        "executionId": "6b5ec0d6-ea72-4e9e-9ea2-3ae1067b5017",
+        "chatSessionId": "sess_cfc4a53e-4d59-4cca-a744-11eff5707171",
+        "timestamp": 1791819913513
+      },
+      {
+        "executionId": "cb9e0c6e-ca50-473c-8edd-5c94e6602933",
+        "chatSessionId": "sess_86b358a8-f471-423d-b803-477bb282f143",
+        "timestamp": 1791820801256
+      },
+      {
+        "executionId": "cb9e0c6e-ca50-473c-8edd-5c94e6602933",
+        "chatSessionId": "sess_86b358a8-f471-423d-b803-477bb282f143",
+        "timestamp": 1791820808415
+      },
+      {
+        "executionId": "cb9e0c6e-ca50-473c-8edd-5c94e6602933",
+        "chatSessionId": "sess_86b358a8-f471-423d-b803-477bb282f143",
+        "timestamp": 1791820901188
+      },
+      {
+        "executionId": "cb9e0c6e-ca50-473c-8edd-5c94e6602933",
+        "chatSessionId": "sess_86b358a8-f471-423d-b803-477bb282f143",
+        "timestamp": 1791820909131
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821439135
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821563903
+      }
+    ],
+    "10.2 实现排除管理：添加排除文件夹/图片、展示排除列表、逐条删除": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749247369
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819801993
+      },
+      {
+        "executionId": "6b5ec0d6-ea72-4e9e-9ea2-3ae1067b5017",
+        "chatSessionId": "sess_cfc4a53e-4d59-4cca-a744-11eff5707171",
+        "timestamp": 1791819919103
+      },
+      {
+        "executionId": "cb9e0c6e-ca50-473c-8edd-5c94e6602933",
+        "chatSessionId": "sess_86b358a8-f471-423d-b803-477bb282f143",
+        "timestamp": 1791820928398
+      },
+      {
+        "executionId": "cb9e0c6e-ca50-473c-8edd-5c94e6602933",
+        "chatSessionId": "sess_86b358a8-f471-423d-b803-477bb282f143",
+        "timestamp": 1791820940856
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821439264
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821568255
+      }
+    ],
+    "10.3 实现参考图模式选择（单图 / 多图 Radio），写入 ConfigStore": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749247457
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819802133
+      },
+      {
+        "executionId": "6b5ec0d6-ea72-4e9e-9ea2-3ae1067b5017",
+        "chatSessionId": "sess_cfc4a53e-4d59-4cca-a744-11eff5707171",
+        "timestamp": 1791819901924
+      },
+      {
+        "executionId": "cb9e0c6e-ca50-473c-8edd-5c94e6602933",
+        "chatSessionId": "sess_86b358a8-f471-423d-b803-477bb282f143",
+        "timestamp": 1791820932913
+      },
+      {
+        "executionId": "cb9e0c6e-ca50-473c-8edd-5c94e6602933",
+        "chatSessionId": "sess_86b358a8-f471-423d-b803-477bb282f143",
+        "timestamp": 1791820940941
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821439385
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821571013
+      }
+    ],
+    "10.4 实现皮肤选择器（三张皮肤预览卡片），切换后即时更新 Widget": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749247555
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819802294
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821439555
+      }
+    ],
+    "10.5 实现 Demo/Real 模式切换开关，DemoMode 时显示「演示模式」标签": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749247640
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819802387
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821439670
+      }
+    ],
+    "10.6 实现隐私声明区域（固定文本）和 API 配置状态展示": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749247732
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819802493
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821439811
+      }
+    ],
+    "11.1 创建皮肤资产系统（SVG/PNG 资源 + CSS 变量方案），实现像素宝箱皮肤（皮肤 A）": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749247826
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819802596
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821439997
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821559013
+      }
+    ],
+    "11.2 实现魔法药瓶 + 炼金锅皮肤（皮肤 B）": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749247925
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819802696
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821440134
+      }
+    ],
+    "11.3 实现纸飞机 + 记忆相册皮肤（皮肤 C）": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749248086
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819802794
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821440250
+      }
+    ],
+    "11.4 实现拖放交互逻辑（drag events → IPC job:start），确保点击/悬浮不触发": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749248179
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819802887
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821440371
+      }
+    ],
+    "11.5 实现「图片数量不足」时禁用 Trigger 的逻辑": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749248261
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819802981
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821440494
+      }
+    ],
+    "12.1 实现 `PipelineStatusPanel`：五个阶段指示器（等待/进行中/完成/失败），带取消按钮": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749248349
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819803077
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821440640
+      }
+    ],
+    "12.2 实现 `RevealPanel`：生成图展示、本次配方（主题 + 原图缩略图 + 时间）、四个操作按钮": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749248452
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819803168
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821440752
+      }
+    ],
+    "12.3 实现 `ErrorPanel`：失败阶段描述、重试按钮、丢弃按钮": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749248557
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819803266
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821440897
+      }
+    ],
+    "12.4 实现取消和复位逻辑：取消 → AbortController.abort() → Trigger 动画复位 ≤500ms": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749248652
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819803363
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821441030
+      }
+    ],
+    "13.1 实现 `ProvenanceStore`：save / list / delete，持久化到本地 JSON 文件": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749248754
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819803468
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821441167
+      }
+    ],
+    "13.2 实现文件保存 IPC handler（`file:save-generated-image`）：调用系统 save dialog，写入用户指定位置": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749248875
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819803562
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821441288
+      }
+    ],
+    "14. 阶段二检查点": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749248972
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819803663
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821441423
+      }
+    ],
+    "15.1 实现 `QwenVLAdapter`：调用 Qwen3-VL-Plus，实现 `describeImages()`": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749249076
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819803760
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821441548
+      }
+    ],
+    "15.2 实现 `DeepSeekAdapter`：调用 DeepSeek-V4，实现 `createPrompt()` 和 `moderatePrompt()`": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749249193
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819803861
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821441677
+      }
+    ],
+    "15.3 实现 `QwenImageAdapter`：调用 Qwen-Image-3.0，实现 `generateImage()`": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749249294
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819803958
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821441799
+      }
+    ],
+    "15.4 通过工厂函数 `createModelGateway(mode)` 在主进程中根据配置切换 Mock/Api 实现": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749249374
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819804070
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821441932
+      }
+    ],
+    "16.1 在 `GenerationJobService` 的 `start()` 中，RealMode 下在第一次网络调用前触发 IPC 事件通知渲染进程": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749249476
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819804180
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821442066
+      }
+    ],
+    "16.2 在 Widget 渲染进程中实现 `UploadConfirmDialog`，显示：选中图片文件名、外部服务名称、用途说明、费用提示、确认/取消按钮": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749249572
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819804282
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821442195
+      }
+    ],
+    "16.3 用户点击取消时，通过 IPC 通知主进程取消当前 Job，Trigger 复位": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749249664
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819804380
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821442324
+      }
+    ],
+    "17.1 在 ControlPage 的 `ApiConfigSection` 中，检测 `process.env` 中 API Key 是否存在": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749249958
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819804492
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821442450
+      }
+    ],
+    "17.2 在主进程 `GenerationJobService.start()` 中二次校验 API Key，若缺少则 Job 直接转 `failed`": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749250077
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819804596
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821442566
+      }
+    ],
+    "18.1 完善各 API adapter 的错误捕获：网络错误、非 2xx 响应、超时、内容拒绝，映射到统一的 `JobError` 类型": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749250180
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819804706
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821442778
+      }
+    ],
+    "18.2 实现重试逻辑：从失败阶段重新开始，不重新抽图（复用 `describing` 阶段前已有的 `selectedPhotos`）": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749250275
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819804918
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821442958
+      }
+    ],
+    "19. 最终检查点": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791749250377
+      },
+      {
+        "executionId": "85f45841-19b6-4223-b154-83a7e4cbf290",
+        "chatSessionId": "sess_17e0c1b4-e1cc-496c-a591-647aae1170ad",
+        "timestamp": 1791819805026
+      },
+      {
+        "executionId": "63ea40b5-c2ec-4ad8-a5ab-d3721cf34cf0",
+        "chatSessionId": "sess_c00edaaf-d68b-4040-87bd-5921ea4bb46a",
+        "timestamp": 1791821443069
+      }
+    ],
+    "2. 搭建 Electron 双窗口框架": [
+      {
+        "executionId": "cfd87bb6-5670-4379-8c02-598870d147ce",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791750105966
+      }
+    ],
+    "3. 实现 preload IPC 接口骨架": [
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791788161207
+      }
+    ],
+    "4. 实现 ConfigStore 与 AppConfig 持久化": [
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791788239538
+      }
+    ],
+    "5. 搭建渲染进程 React 应用骨架": [
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791788498232
+      }
+    ],
+    "7. 实现 PhotoRepository 核心逻辑": [
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791790917625
+      }
+    ],
+    "8. 实现 GenerationJob 状态机": [
+      {
+        "executionId": "3aa51816-abc3-44ca-bda0-1c24ba82b2cb",
+        "chatSessionId": "sess_1682f889-b863-4999-b7d7-343292a17fd8",
+        "timestamp": 1791791438938
+      }
+    ],
+    "9. 实现 MockModelGateway（Demo 模式）": [
+      {
+        "executionId": "33d34465-64cf-4800-b6aa-8cdf6b16231b",
+        "chatSessionId": "sess_227ad3ff-76b9-4a66-8ad8-c3347dcf76e4",
+        "timestamp": 1791819714861
+      }
+    ]
+  }
+}

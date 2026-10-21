@@ -1,0 +1,610 @@
+/* ========================================================
+   全局重置与基础
+======================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background: transparent;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  color: #e0e0e0;
+  background: transparent;
+  line-height: 1.6;
+}
+
+/* ========================================================
+   ControlPage 布局
+======================================================== */
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.mode-status-bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: #16213e;
+  border-bottom: 1px solid #0f3460;
+}
+
+.app-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-title h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+.app-icon {
+  font-size: 20px;
+}
+
+.mode-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mode-badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.mode-badge--demo {
+  background: #2d3561;
+  color: #a0b4e8;
+  border: 1px solid #3d4a7a;
+}
+
+.mode-badge--real {
+  background: #2d4a30;
+  color: #7ecb82;
+  border: 1px solid #3a6040;
+}
+
+.app-main {
+  padding: 0 24px 48px;
+}
+
+.control-section {
+  padding: 24px 0;
+  border-bottom: 1px solid #1e2a4a;
+}
+
+.control-section:last-child {
+  border-bottom: none;
+}
+
+.section-header {
+  margin-bottom: 6px;
+}
+
+.section-header h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #c0cce8;
+}
+
+.section-desc {
+  font-size: 13px;
+  color: #7a8aaa;
+  margin-bottom: 16px;
+}
+
+.empty-list {
+  border: 1px dashed #2d3a5a;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.empty-hint {
+  color: #4a5a7a;
+  font-size: 13px;
+}
+
+/* ========================================================
+   按钮
+======================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: opacity 0.2s, background 0.2s;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-sm {
+  padding: 4px 10px;
+  font-size: 12px;
+  background: #2d3a5a;
+  color: #a0b0d0;
+  border-radius: 4px;
+}
+
+.btn-sm:hover:not(:disabled) {
+  background: #3a4a6a;
+}
+
+.btn-primary {
+  background: #3d5a9a;
+  color: #fff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #4a6ab0;
+}
+
+/* ========================================================
+   Radio 组
+======================================================== */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #c0cce8;
+  font-size: 14px;
+}
+
+.radio-label input[type="radio"] {
+  accent-color: #4a80d0;
+}
+
+/* ========================================================
+   皮肤选择器
+======================================================== */
+.skin-selector {
+  display: flex;
+  gap: 12px;
+}
+
+.skin-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 20px;
+  border: 2px solid #2d3a5a;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  background: #1e2a44;
+  min-width: 90px;
+}
+
+.skin-card:hover {
+  border-color: #4a5a8a;
+  background: #253050;
+}
+
+.skin-card--active {
+  border-color: #4a80d0;
+  background: #1e2e50;
+}
+
+.skin-preview {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.skin-name {
+  font-size: 12px;
+  color: #8090b0;
+  text-align: center;
+}
+
+.skin-card--active .skin-name {
+  color: #80b0e0;
+}
+
+/* ========================================================
+   隐私声明
+======================================================== */
+.privacy-notice .privacy-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.privacy-list li {
+  font-size: 13px;
+  color: #7a8aaa;
+  padding-left: 16px;
+  position: relative;
+}
+
+.privacy-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #4a5a7a;
+}
+
+.privacy-list li strong {
+  color: #a0b4c8;
+}
+
+/* ========================================================
+   Widget 容器 (透明无边框)
+======================================================== */
+.widget-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.demo-badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  font-size: 10px;
+  padding: 2px 6px;
+  background: rgba(74, 128, 208, 0.3);
+  color: #80b0e0;
+  border-radius: 6px;
+  border: 1px solid rgba(74, 128, 208, 0.4);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.skin-layer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  background: transparent;
+}
+
+/* ========================================================
+   Drop Zone - 透明容器，仅显示图形
+======================================================== */
+.drop-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: transparent;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  position: relative;
+}
+
+.drop-zone[data-state='hover'] {
+  transform: scale(1.1);
+}
+
+.drop-zone[data-state='triggered'] {
+  animation: pulse 0.6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+.drop-zone-hint {
+  font-size: 9px;
+  color: rgba(200, 200, 220, 0.8);
+  text-align: center;
+  margin-top: 4px;
+  white-space: nowrap;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+  font-family: -apple-system, sans-serif;
+}
+
+/* ========================================================
+   Trigger - 透明容器，仅显示图形
+======================================================== */
+.trigger-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: grab;
+  user-select: none;
+  transition: transform 0.15s ease, filter 0.2s ease;
+  background: transparent;
+}
+
+.trigger-element:active {
+  cursor: grabbing;
+}
+
+.trigger-element[data-state='dragging'] {
+  transform: scale(1.15) rotate(5deg);
+  filter: drop-shadow(0 0 8px rgba(255,215,0,0.6));
+}
+
+.trigger-element[data-state='triggered'] {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.trigger-element[draggable='true']:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 6px rgba(255,215,0,0.3));
+}
+
+.trigger-hint {
+  font-size: 9px;
+  color: rgba(200, 200, 220, 0.7);
+  text-align: center;
+  margin-top: 3px;
+  white-space: nowrap;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+  font-family: -apple-system, sans-serif;
+}
+
+/* ============================================================
+   Pipeline Status Panel
+======================================================== */
+.pipeline-status-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  width: 100%;
+}
+
+.stages {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.stage-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  font-size: 11px;
+  border-radius: 4px;
+  background: rgba(30, 40, 70, 0.6);
+  color: rgba(160, 180, 220, 0.6);
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+.stage-indicator .stage-icon {
+  font-size: 12px;
+  width: 16px;
+  text-align: center;
+}
+
+.stage-indicator .stage-label {
+  flex: 1;
+}
+
+.stage-indicator.stage--active {
+  background: rgba(74, 128, 208, 0.3);
+  color: #80b0e0;
+  border: 1px solid rgba(74, 128, 208, 0.4);
+}
+
+.stage-indicator.stage--done {
+  background: rgba(40, 100, 60, 0.2);
+  color: #7ecb82;
+  border: 1px solid rgba(40, 100, 60, 0.3);
+}
+
+.stage-indicator.stage--failed {
+  background: rgba(100, 40, 40, 0.2);
+  color: #e88080;
+  border: 1px solid rgba(100, 40, 40, 0.3);
+}
+
+.btn-cancel {
+  padding: 6px 16px;
+  border: 1px solid rgba(180, 80, 80, 0.5);
+  border-radius: 6px;
+  background: rgba(100, 40, 40, 0.3);
+  color: #e88080;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-cancel:hover {
+  background: rgba(120, 50, 50, 0.5);
+}
+
+/* ========================================================
+   Reveal Panel
+======================================================== */
+.reveal-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.generated-image {
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid rgba(100, 150, 220, 0.3);
+}
+
+.provenance-card {
+  width: 100%;
+  padding: 8px;
+  background: rgba(20, 30, 60, 0.6);
+  border-radius: 6px;
+  font-size: 11px;
+  color: rgba(160, 180, 220, 0.7);
+}
+
+.action-bar {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.action-bar button {
+  padding: 4px 8px;
+  font-size: 11px;
+  border: 1px solid rgba(100, 150, 220, 0.3);
+  border-radius: 4px;
+  background: rgba(30, 50, 80, 0.5);
+  color: rgba(160, 180, 220, 0.8);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.action-bar button:hover {
+  background: rgba(50, 80, 130, 0.6);
+}
+
+/* ========================================================
+   Error Panel
+======================================================== */
+.error-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 16px;
+  color: #e88080;
+  font-size: 12px;
+}
+
+.error-panel button {
+  padding: 6px 14px;
+  font-size: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid rgba(180, 80, 80, 0.4);
+  background: rgba(100, 40, 40, 0.3);
+  color: #e88080;
+  transition: background 0.2s;
+}
+
+.error-panel button:hover {
+  background: rgba(120, 50, 50, 0.5);
+}
+
+/* ========================================================
+   Upload Confirm Dialog
+======================================================== */
+.upload-confirm-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 12px;
+}
+
+.upload-confirm-dialog {
+  background: #1e2a44;
+  border: 1px solid #2d3a5a;
+  border-radius: 12px;
+  padding: 16px;
+  width: 100%;
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ========================================================
+   Skin-specific effects
+======================================================== */
+.pixel-chest[data-state='hover'] {
+  filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.5));
+}
+
+.pixel-key[data-state='dragging'] {
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.6));
+}
+
+.magic-cauldron[data-state='hover'] {
+  filter: drop-shadow(0 0 12px rgba(124, 77, 255, 0.5));
+}
+
+.magic-potion[data-state='dragging'] {
+  filter: drop-shadow(0 0 8px rgba(233, 30, 99, 0.6));
+}
+
+.paper-album[data-state='hover'] {
+  filter: drop-shadow(0 0 12px rgba(255, 204, 2, 0.5));
+}
+
+.paper-plane[data-state='dragging'] {
+  filter: drop-shadow(0 0 8px rgba(150, 150, 200, 0.6));
+}
+
+/* Trigger reset animation */
+.trigger-reset {
+  animation: triggerReset 0.5s ease-out;
+}
+
+@keyframes triggerReset {
+  0% { transform: scale(1.1) rotate(5deg); opacity: 0.3; }
+  50% { transform: scale(1.05) rotate(0deg); opacity: 0.7; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+/* Float animation for trigger element */
+@keyframes floatPlane {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-3px) rotate(2deg); }
+}
