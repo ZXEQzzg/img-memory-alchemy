@@ -18,6 +18,10 @@
 
 核心交互：把桌面挂件上的触发物（钥匙 / 药瓶 / 纸飞机 / 星星 / 电池 / 蜘蛛）拖入目标区域（宝箱 / 炼金锅 / 窗户 / 许愿瓶 / 电池仓 / 蜘蛛网）并松开，仪式感慢慢，主要是怕误触..；生成完毕自动弹出揭晓窗口，展示作品与来源。
 
+<p align="center">
+  <img src="img/demo.gif" alt="六套桌宠交互演示" width="480" />
+</p>
+
 ---
 
 ## ✨ 特性
@@ -86,6 +90,22 @@ Demo 模式使用本地预置示例素材，完整走完五段流水线，不发
 | `npm run lint` | ESLint 检查 |
 | `npm run typecheck` | TypeScript 类型检查 |
 | `npm run package` | 打包为可分发安装包（Windows） |
+
+---
+
+## KIRO 深度使用（参赛证据）
+
+本项目全程使用 KIRO 进行**规格驱动开发**（requirements-first 工作流），相关 spec 完整保留在仓库中：
+
+| Spec | 内容 |
+|---|---|
+| `.kiro/specs/img-memory-alchemy/requirements.md` | 14 组功能/安全需求，Given/When/Then 验收标准 |
+| `.kiro/specs/img-memory-alchemy/design.md` | 技术设计：架构、状态机、属性测试定义 |
+| `.kiro/specs/img-memory-alchemy/tasks.md` | 分阶段实施计划与依赖图 |
+| `.kiro/specs/widget-independent-pets/bugfix.md` | 桌宠独立窗口重构的需求 |
+
+- **工作流**：requirements-first（需求 → 设计 → 任务 → 分阶段交付与迭代）
+- **五段流水线**：选图 → 理解 → 脑洞 → 守门 → 生成，天然契合 spec 驱动 + 分阶段编排展示
 
 ---
 
