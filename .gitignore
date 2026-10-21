@@ -1,3 +1,6 @@
+# 后台 agent 产物
+.agents/
+
 # 依赖
 node_modules/
 
@@ -18,6 +21,9 @@ Config_ModAPI.md
 任务书.md
 关键信息.md
 记忆炼金_项目全景文档.md
+IMA_context.md
+随机能力与流程说明.md
+项目交接.md
 
 # 用户数据（本地生成内容）
 generated-images/
