@@ -16,7 +16,11 @@
 
 记忆炼金是一款 Electron 桌面应用，通过“两个桌宠”的接触交互来触发应用。它会把本地相册中的照片随机抽取，经由 AI 五段流水线（**选图 → 理解 → 脑洞 → 守门 → 生成**），炼成一幅意想不到的新作品。
 
-核心交互：把桌面挂件上的触发物（钥匙 / 药瓶 / 纸飞机 / 星星 / 电池 / 蜘蛛）拖入目标区域（宝箱 / 炼金锅 / 窗户 / 许愿瓶 / 电池仓 / 蜘蛛网）并松开，仪式感慢慢，主要是怕误触..；生成完毕自动弹出揭晓窗口，展示作品与来源。
+<p align="center">
+  <img src="img/tu2.png" alt="记忆炼金" width="720" />
+</p>
+
+交互功能：把桌面挂件上的触发物（钥匙 / 药瓶 / 纸飞机 / 星星 / 电池 / 蜘蛛）拖入目标区域（宝箱 / 炼金锅 / 窗户 / 许愿瓶 / 电池仓 / 蜘蛛网）并松开进行启动，仪式感满满，且防误触；生成完毕自动弹出揭晓窗口，展示作品与来源。
 
 <p align="center">
   <img src="img/demo.gif" alt="六套桌宠交互演示" width="480" />
@@ -54,11 +58,11 @@ Demo 模式使用本地预置示例素材，完整走完五段流水线，不发
 
 当前真实模式使用三个模型服务：
 
-| 环节 | 模型 | 服务商 | 所需 Key |
-|---|---|---|---|
-| 图片理解 | `qwen3-vl-plus` | 阿里云 DashScope | `QWEN_API_KEY` |
-| 脑洞 + 守门 | `deepseek-v4-pro` | DeepSeek | `DEEPSEEK_API_KEY` |
-| 图片生成 | `qwen-image-2.0-pro` | 阿里云 DashScope | `QWEN_API_KEY` |
+| 环节        | 模型                   | 服务商           | 所需 Key             |
+| ----------- | ---------------------- | ---------------- | -------------------- |
+| 图片理解    | `qwen3-vl-plus`      | 阿里云 DashScope | `QWEN_API_KEY`     |
+| 脑洞 + 守门 | `deepseek-v4-pro`    | DeepSeek         | `DEEPSEEK_API_KEY` |
+| 图片生成    | `qwen-image-2.0-pro` | 阿里云 DashScope | `QWEN_API_KEY`     |
 
 配置步骤：
 
@@ -67,14 +71,12 @@ Demo 模式使用本地预置示例素材，完整走完五段流水线，不发
    ```bash
    cp .env.example .env
    ```
-
 2. 编辑 `.env`，填入你的 Key：
 
    ```env
    QWEN_API_KEY=你的阿里云通义千问 API Key
    DEEPSEEK_API_KEY=你的 DeepSeek API Key
    ```
-
 3. 启动后在控制页把模式切换为「真实模式」。
 
 > 说明：模型名与 endpoint 目前硬编码在 `src/main/gateway/` 下的 adapter 中。如需接入其它模型，请参考对应 adapter 修改（后续版本计划支持 `.env` 直接配置模型名）。
@@ -83,13 +85,13 @@ Demo 模式使用本地预置示例素材，完整走完五段流水线，不发
 
 ## 常用命令
 
-| 命令 | 说明 |
-|---|---|
-| `npm run dev` | 启动开发环境（热更新） |
-| `npm run build` | 构建生产包 |
-| `npm run lint` | ESLint 检查 |
-| `npm run typecheck` | TypeScript 类型检查 |
-| `npm run package` | 打包为可分发安装包（Windows） |
+| 命令                  | 说明                          |
+| --------------------- | ----------------------------- |
+| `npm run dev`       | 启动开发环境（热更新）        |
+| `npm run build`     | 构建生产包                    |
+| `npm run lint`      | ESLint 检查                   |
+| `npm run typecheck` | TypeScript 类型检查           |
+| `npm run package`   | 打包为可分发安装包（Windows） |
 
 ---
 
@@ -97,12 +99,12 @@ Demo 模式使用本地预置示例素材，完整走完五段流水线，不发
 
 本项目全程使用 KIRO 进行**规格驱动开发**（requirements-first 工作流），相关 spec 完整保留在仓库中：
 
-| Spec | 内容 |
-|---|---|
+| Spec                                               | 内容                                         |
+| -------------------------------------------------- | -------------------------------------------- |
 | `.kiro/specs/img-memory-alchemy/requirements.md` | 14 组功能/安全需求，Given/When/Then 验收标准 |
-| `.kiro/specs/img-memory-alchemy/design.md` | 技术设计：架构、状态机、属性测试定义 |
-| `.kiro/specs/img-memory-alchemy/tasks.md` | 分阶段实施计划与依赖图 |
-| `.kiro/specs/widget-independent-pets/bugfix.md` | 桌宠独立窗口重构的需求 |
+| `.kiro/specs/img-memory-alchemy/design.md`       | 技术设计：架构、状态机、属性测试定义         |
+| `.kiro/specs/img-memory-alchemy/tasks.md`        | 分阶段实施计划与依赖图                       |
+| `.kiro/specs/widget-independent-pets/bugfix.md`  | 桌宠独立窗口重构的需求                       |
 
 - **工作流**：requirements-first（需求 → 设计 → 任务 → 分阶段交付与迭代）
 - **五段流水线**：选图 → 理解 → 脑洞 → 守门 → 生成，天然契合 spec 驱动 + 分阶段编排展示
@@ -111,15 +113,15 @@ Demo 模式使用本地预置示例素材，完整走完五段流水线，不发
 
 ## 技术栈
 
-| 层次 | 技术 |
-|---|---|
-| 桌面框架 | Electron 28 |
-| 前端框架 | React 18 + TypeScript 5 |
-| 构建工具 | Vite 5 + electron-vite 2 |
-| 状态管理 | React Hooks |
-| 样式 | CSS + inline style + 内联 SVG 皮肤 |
-| 测试 | Vitest + fast-check（已配置） |
-| Lint | ESLint + Prettier |
+| 层次     | 技术                               |
+| -------- | ---------------------------------- |
+| 桌面框架 | Electron 28                        |
+| 前端框架 | React 18 + TypeScript 5            |
+| 构建工具 | Vite 5 + electron-vite 2           |
+| 状态管理 | React Hooks                        |
+| 样式     | CSS + inline style + 内联 SVG 皮肤 |
+| 测试     | Vitest + fast-check（已配置）      |
+| Lint     | ESLint + Prettier                  |
 
 ---
 
