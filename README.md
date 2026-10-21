@@ -10,6 +10,8 @@
 
 > 本项目参与 亚马逊云科技(AWS) **KIRO鬼点子计划 - 无用之用 Useless but Useful**
 
+> 📄 **比赛说明文档（PDF）**：[点击在线查看](./AWS-KIRO_Image%20Memory%20Alchemy.pdf)
+
 ---
 
 ## 项目简介
